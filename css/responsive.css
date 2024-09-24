@@ -1,0 +1,115 @@
+@media (max-width: 767px){
+    .header .container form{
+        display: none;
+    }
+    .header .container nav:hover ul{
+        height: 20em
+    }
+    .header .container nav i{
+        font-size: 25px;
+        color: var(--first-color);
+        transition: var(--main-transition);
+    }
+    .header .container nav i:hover{
+        transform: rotate(90deg);
+    }
+    .header .container nav ul {
+        display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--bg-color);
+    height: 0em;
+    justify-content: space-evenly;
+    overflow: hidden;
+    transition: var(--main-transition);
+    z-index: 999999999;
+    }
+    .header .container nav ul  .last-li-header a img{
+    display: none;
+    
+    }
+    .part1 .container {
+        padding: 30px;
+    }
+    .part1 .container p {
+        margin-top: 40px;
+        font-size: 21px;
+    }
+    
+    .part1 .container h1 {
+        width: 100%;
+        font-size: 21px;
+    }
+    .part1 .container .landing {
+        background-position: right center;
+        text-align: center;
+    }
+    .part1 .container a {
+        margin: 10px auto 0;
+    }
+    .page2 .container h2 {
+        font-size: 30px;
+    }
+    .page2 .container h2 + span {
+        font-size: 30px;
+    }
+    .page2 .container {
+        background-color: var(--bg-color);
+        padding: 0px 30px 30px 30px;
+    }
+    .page2 .container .boxs .cup {
+        flex-direction: column;
+    }
+    .page2 .container .boxs .box {
+        width: 200px;
+        padding: 15px;
+    }
+    .page2 .container .boxs .box img {
+        border-radius: 25px;
+        width: 10em;
+    }
+    .page2 .container .boxs .cup .box:first-child {
+        border-radius: 25px 25px 0 0;
+    }
+    .page2 .container .boxs .cup .box:last-child {
+        border-radius: 0 0 25px 25px;
+    }
+    .page3 .container .cont .boxs .box {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .page3 .container .cont .boxs .box img {
+        width: 15em;
+        max-width: 100%;
+    }
+    .page3 .container .cont .boxs .box div{
+        text-align: center;
+    }
+    .page3 .container .cont h2, .page3 .container .cont span {
+        font-size: 24px;
+    }
+    .page3 .container .cont .boxs .box a {
+       padding: 10px;
+      
+    }
+    .page3 .container .cont .link {
+        padding: 10px;
+        text-align: center;
+    }
+    .page2 .container .cont a {
+        padding: 10px;
+      
+    }
+    .page3 .container {
+        padding: 30px;
+
+    }
+}
+@media (max-width: 991px){
+
+}

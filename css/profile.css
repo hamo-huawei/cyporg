@@ -1,0 +1,410 @@
+/* -------start global rules-------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: black;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+:root {
+    --first-color: #ff9dad;
+    --second-color: #cacaca;
+    --bg-color: #494949;
+    --main-transition: 0.6s;
+    --cont-padding: 60px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media(min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+
+    .header .container nav i {
+        display: none;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+
+    @media (min-width: 1200px) {
+        .container {
+            width: 1170px;
+        }
+    }
+}
+
+/* -------end global rules-------- */
+/* -----start header------- */
+.header {
+    /* background-color: #7293cf; */
+    z-index: 99999999;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 70px;
+    gap: 30px;
+}
+
+.header .container>img {
+    width: 10em;
+
+}
+
+.header .container form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header .container form label i {
+    color: var(--second-color);
+}
+
+.header .container form input {
+    outline: none;
+    border: none;
+    height: 2em;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--bg-color);
+}
+
+.header .container form input::placeholder {
+    color: #bfbfbf;
+}
+
+.header .container nav ul {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+.header .container nav ul .last-li-header a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--bg-color);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.header .container nav ul .last-li-header a img {
+    border-radius: 50%;
+    width: 30px;
+
+}
+
+.header .container nav ul li a {
+    color: var(--second-color);
+    text-transform: capitalize;
+    transition: var(--main-transition);
+    font-size: 15px;
+}
+
+.header .container nav ul li a:hover {
+    color: var(--first-color)
+}
+
+/* -----end header------- */
+/*----------- start part1------------  */
+.part1 {
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 25px 25px 0 0;
+}
+
+.part1 .cont {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+    border-radius: 25px 25px 0 0;
+}
+
+.part1 .cont::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: calc(100% - 40px);
+    bottom: 0;
+    background-color: var(--second-color);
+    left: 20px;
+
+}
+
+.part1 img {
+    width: 15em;
+    border-radius: 25px;
+}
+
+
+
+.part1 .text h4 {
+    background-color: var(--first-color);
+    padding: 10px;
+    width: fit-content;
+    border-radius: 20px;
+
+}
+
+.part1 .text h2 {
+    margin-top: 20px;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+}
+
+.part1 .text p {
+    line-height: 25px;
+    margin-top: 10px;
+    color: var(--second-color);
+}
+
+.part1 .text a {
+    display: block;
+    margin-top: 20px;
+    color: var(--first-color);
+    padding: 14px;
+    border: 1px solid var(--first-color);
+    width: fit-content;
+    border-radius: 25px;
+    text-transform: capitalize;
+    transition: var(--main-transition);
+}
+
+.part1 .text a:hover {
+    background-color: #fff;
+}
+
+.part1 .text,
+.part1 .right {
+    width: calc((100% - 15em) / 2)
+}
+
+.part1 .right {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.part1 .right div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.part1 .right div:not(:last-of-type) {
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--second-color);
+}
+
+.part1 .right div h4 {
+    color: var(--second-color);
+
+}
+
+.part1 .right div span {
+    color: var(--first-color);
+}
+/* start cont2  */
+.part1 .cont2{
+    background-color: black;
+    padding: 20px;
+    color: white;
+    border-radius: 0 0 25px 25px;
+}
+.part1 .cont2 > h2{
+  text-decoration: underline;
+}
+.part1 .cont2 > h2 + span{
+    color: var(--first-color);
+}
+.part1 .cont2 > h2,
+.part1 .cont2 > h2 + span{
+    font-size: 30px;
+    display: inline-block;
+    text-transform: capitalize;
+}
+.part1 .cont2  .clips{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+    gap: 10px;
+
+
+}
+.part1 .cont2  .clips .clip{
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 25px;
+}
+.part1 .cont2  .clips .clip .img{
+    height: 10em;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 25px;
+    position: relative;
+}
+.part1 .cont2  .clips .clip:first-of-type .img{
+background-image: url("../images/clip-01.jpg");
+}
+.part1 .cont2  .clips .clip:nth-of-type(2) .img{
+    background-image: url("../images/clip-02.jpg");
+}
+.part1 .cont2  .clips .clip:nth-of-type(3) .img{
+    background-image: url("../images/clip-03.jpg");
+}
+.part1 .cont2  .clips .clip:last-of-type .img{
+    background-image: url("../images/clip-04.jpg");
+}
+.part1 .cont2  .clips .clip .img i{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: var(--first-color);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.part1 .cont2  .clips .clip .tx{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.part1 .cont2  .clips .clip .tx h3{
+    text-transform: capitalize;
+}
+.part1 .cont2  .clips .clip .tx span i{
+color: var(--first-color);
+}
+/* end cont2  */
+
+/* -----------end part1-------------  */
+/* ------------start part2-----------  */
+.part2{
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 0 0 25px 25px;
+}
+.part2 .cont3{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 25px;
+}
+.part2 .cont3 > h2{
+text-decoration: underline;
+}
+.part2 .cont3 > h2 + span{
+color: var(--first-color)
+}
+.part2 .cont3 > h2,
+.part2 .cont3 > h2 + span{
+    display: inline-block;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.part2 .cont3 .boxs{
+    margin-top: 25px;
+}
+.part2 .cont3 .boxs .box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 15px;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+.part2 .cont3 .boxs .box:not(:last-of-type)::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: calc(100% - 52px);
+    background-color: var(--second-color);
+}
+.part2 .cont3 .boxs .box:not(:last-of-type){
+    margin-bottom: 20px;
+}
+.part2 .cont3 .boxs .box img{
+    border-radius: 30%;
+}
+
+.part2 .cont3 .boxs .box div h3{
+    text-transform: capitalize;
+}
+.part2 .cont3 .boxs .box div p{
+    color: var(--second-color);
+    font-size: 14px;
+    margin-top: 10px;
+}
+.part2 .cont3 .boxs .box .down{
+    color: var(--bg-color);
+    border: 1px solid var(--bg-color);
+    padding: 10px;
+    border-radius: 20px;
+    transition: var(--main-transition);
+}
+.part2 .cont3 .boxs .box .down:hover{
+    color: var(--first-color);
+    border-color: var(--first-color);
+}
+
+
+/* ------------end part2-----------  */
+/* start footer  */
+footer p{
+    color: white;
+}
+footer .container{
+    text-align: center;
+    margin: 20px 0
+}
+/* end footer  */

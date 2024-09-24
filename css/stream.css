@@ -1,0 +1,413 @@
+/* -------start global rules-------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: black;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+:root {
+    --first-color: #ff9dad;
+    --second-color: #cacaca;
+    --bg-color: #494949;
+    --main-transition: 0.6s;
+    --cont-padding: 60px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media(min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+
+    .header .container nav i {
+        display: none;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+
+    @media (min-width: 1200px) {
+        .container {
+            width: 1170px;
+        }
+    }
+}
+
+/* -------end global rules-------- */
+/* -----start header------- */
+.header {
+    /* background-color: #7293cf; */
+    z-index: 99999999;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 70px;
+    gap: 30px;
+}
+
+.header .container>img {
+    width: 10em;
+
+}
+
+.header .container form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header .container form label i {
+    color: var(--second-color);
+}
+
+.header .container form input {
+    outline: none;
+    border: none;
+    height: 2em;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--bg-color);
+}
+
+.header .container form input::placeholder {
+    color: #bfbfbf;
+}
+
+.header .container nav ul {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+.header .container nav ul .last-li-header a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--bg-color);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.header .container nav ul .last-li-header a img {
+    border-radius: 50%;
+    width: 30px;
+
+}
+
+.header .container nav ul li a {
+    color: var(--second-color);
+    text-transform: capitalize;
+    transition: var(--main-transition);
+    font-size: 15px;
+}
+
+.header .container nav ul li a:hover {
+    color: var(--first-color)
+}
+
+/* -----end header------- */
+/* ------start part1-------- */
+.part1{
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    gap: 20px;
+}
+.part1 .left{
+    width: 65%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 25px;
+    max-height: 30em;
+}
+.part1 .left .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.part1 .left .title .h h2{
+    text-decoration: underline;
+}
+.part1 .left .title .h span{
+    color: var(--first-color);
+}
+.part1 .left .title .h h2,
+.part1 .left .title .h span{
+    display: inline-block;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.part1 .left .title .arrows i{
+    color: var(--second-color);
+    transition: var(--main-transition)
+}
+.part1 .left .title .arrows i:hover{
+    color: var(--first-color);
+}
+.part1 .left .boxs{
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+    align-items: center;
+}
+.part1 .left  .boxs .box{
+    width: 100%;
+}
+.part1 .left  .boxs .box .img{
+    height: 17em;
+    border-radius: 25px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:hidden;
+}
+.part1 .left  .boxs .box:first-of-type .img{
+background-image: url("../images/featured-01.jpg");
+}
+.part1 .left  .boxs .box:nth-of-type(2) .img{
+    background-image: url("../images/featured-02.jpg");
+}
+.part1 .left  .boxs .box:last-of-type .img{
+    background-image: url("../images/featured-03.jpg");
+}
+.part1 .left  .boxs .box .img span{
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    overflow: hidden;
+    background-color: black;
+    padding: 5px;
+    border-radius: 20px;
+    color: var(--first-color);
+    transition: var(--main-transition)
+}
+.part1 .left  .boxs .box .img:hover span{
+    bottom: 12px;
+}
+.part1 .left  .boxs .box .text{
+    margin-top: 20px;
+}
+.part1 .left  .boxs .box .text div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.part1 .left  .boxs .box .text div:first-child span i{
+    color: yellow;
+}
+.part1 .left  .boxs .box .text div h4{
+    text-transform:capitalize;
+
+}
+.part1 .left  .boxs .box .text div:last-child{
+    margin-top: 5px;
+}
+.part1 .left  .boxs .box .text div:last-child span i{
+    color: var(--first-color);
+}
+.part1 .left  .boxs .box .text div:last-child p{
+    color: var(--bg-color);
+    font-size: 14px;
+}
+.part1 .right{
+    width: calc(100% - 65%);
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 25px;
+ 
+}
+.part1 .right > h2{
+    text-decoration: underline;
+}
+.part1 .right > h2 + span{
+    color: var(--first-color);
+}
+.part1 .right >h2,
+.part1 .right > h2 + span{
+    font-size: 30px;
+    text-transform: capitalize;
+    display: inline-block;
+}
+.part1 .right .act{
+    counter-reset: person;
+    margin-top: 20px;
+}
+.part1 .right .act .per::before{
+counter-increment:person;
+content: "0" counter(person)
+}
+.part1 .right .act .per {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+}
+.part1 .right .act .per:not(:last-of-type){
+    margin-bottom: 35px;
+    border-bottom: 1px solid var(--second-color);
+}
+.part1 .right .act .per div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.part1 .right .act .per div img{
+    border-radius: 50%;
+}
+.part1 .right .act .per div span{
+    display: flex;
+    align-items: center;
+}
+.part1 .right .act .per div span i{
+    background-color: var(--first-color);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.part1 .right .act .per a{
+    transform: translateY(18px);
+    color: white;
+    background-color: var(--first-color);
+    padding: 5px;
+    border-radius: 25px;
+    transition: var(--main-transition);
+}
+.part1 .right .act .per a:hover{
+    background-color: #fff;
+    color: var(--first-color);
+}
+
+
+/* ------end part1-------- */
+/* ------start part2---------  */
+.part2{
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 0 0 25px 25px;
+}
+.part2 .cont{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 25px;
+    position:relative;
+}
+.part2 .cont > h2{
+    text-decoration: underline;
+}
+.part2 .cont > h2 + span{
+color: var(--first-color);
+}
+.part2 .cont > h2,
+.part2 .cont > h2 + span{
+    font-size: 30px;
+    text-transform: capitalize;
+    display: inline-block;
+}
+.part2 .cont .boxs{
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.part2 .cont .boxs .box > img{
+    border-radius: 25px;
+}
+.part2 .cont .boxs .box .text{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+}
+.part2 .cont .boxs .box .text img{
+border-radius: 50%;
+}
+.part2 .cont .boxs .box .text .tx span{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.part2 .cont .boxs .box .text .tx span i{
+    background-color: var(--first-color);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.part2 .cont .boxs .box .text .tx h3{
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+.part2 .cont .more{
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    color: white;
+    background-color: var(--first-color);
+    padding: 7px;
+    border-radius: 20px;
+    text-transform: capitalize;
+    transition: var(--main-transition);
+    bottom: -20px;
+
+}
+.part2 .cont .more:hover{
+    background-color: #fff;
+    color: var(--first-color);
+}
+/* ------end part2---------  */
+/* start footer  */
+footer p{
+    color: white;
+}
+footer .container{
+    text-align: center;
+    margin: 20px 0
+}
+/* end footer  */

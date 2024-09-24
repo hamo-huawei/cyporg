@@ -1,0 +1,450 @@
+/* -------start global rules-------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: black;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+:root {
+    --first-color: #ff9dad;
+    --second-color: #cacaca;
+    --bg-color: #494949;
+    --main-transition: 0.6s;
+    --cont-padding: 60px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media(min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+
+    .header .container nav i {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+
+    @media (min-width: 1200px) {
+        .container {
+            width: 1170px;
+        }
+    }
+}
+
+/* -------end global rules-------- */
+
+/* -------start components------- */
+
+/* -------end components------- */
+/* -----start header------- */
+.header {
+    /* background-color: #7293cf; */
+    z-index: 99999999;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 70px;
+    gap: 30px;
+}
+
+.header .container>img {
+    width: 10em;
+
+}
+
+.header .container form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header .container form label i {
+    color: var(--second-color);
+}
+
+.header .container form input {
+    outline: none;
+    border: none;
+    height: 2em;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--bg-color);
+}
+
+.header .container form input::placeholder {
+    color: #bfbfbf;
+}
+
+.header .container nav ul {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+.header .container nav ul .last-li-header a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--bg-color);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.header .container nav ul .last-li-header a img {
+    border-radius: 50%;
+    width: 30px;
+
+}
+
+.header .container nav ul li a {
+    color: var(--second-color);
+    text-transform: capitalize;
+    transition: var(--main-transition);
+    font-size: 15px;
+}
+
+.header .container nav ul li a:hover {
+    color: var(--first-color)
+}
+
+/* -----end header------- */
+/* ------start part1-------- */
+.part1 {
+    /* height: calc(89vh - -2px); */
+    position: relative;
+}
+
+.part1 .container {
+    padding: 60px;
+    background-color: var(--bg-color);
+    /* height: calc(100vh - 120px); */
+    position: relative;
+    top: 50px;
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.part1 .container .landing {
+    background-image: url(../images/banner-bg.jpg);
+    height: 25em;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.part1 .container p {
+    margin-top: 70px;
+    font-size: 30px;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.part1 .container h1 {
+    font-size: 50px;
+    margin-top: 15px;
+    width: 80%;
+    color: white;
+    text-transform: uppercase;
+}
+
+.part1 .container h1 span {
+    color: var(--first-color)
+}
+
+.part1 .container a {
+    margin-top: 10px;
+    background-color: var(--first-color);
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    text-transform: capitalize;
+    transition: var(--main-transition);
+}
+
+.part1 .container a:hover {
+    background-color: #fff;
+    color: var(--first-color)
+}
+
+/* ------end part1-------- */
+/* start page2 */
+.page2 {
+    margin-top: 50px;
+}
+
+.page2 .container {
+    background-color: var(--bg-color);
+    padding: 0 60px 60px 60px
+}
+
+.page2 .cont {
+    background-color: black;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.page2 .container h2 {
+    font-size: 35px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.page2 .container h2+span {
+    font-size: 35px;
+    text-transform: uppercase;
+    color: var(--first-color);
+}
+
+.page2 .container .boxs {
+    display: flex;
+    margin-top: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.page2 .container .boxs .box {
+    background-color: var(--bg-color);
+    text-align: center;
+    padding: 30px;
+    border-radius: 25px;
+    width: 250px;
+}
+
+.page2 .container .boxs .cup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.page2 .container .boxs .cup .box:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.page2 .container .boxs .cup .box:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.page2 .container .boxs .box img {
+    border-radius: 40px;
+}
+
+.page2 .container .boxs .box .text {
+    margin-top: 15px;
+}
+
+.page2 .container .boxs .box .text .t1,
+.page2 .container .boxs .box .text .t2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page2 .container .boxs .box .text .t1 p {
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.page2 .container .boxs .box .text .t1 .rev,
+.page2 .container .boxs .box .text .t2 .rev {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.page2 .container .boxs .box .text .t2 {
+    margin-top: 10px;
+}
+
+.page2 .container .boxs .box .text .t1 i {
+    color: yellow
+}
+
+.page2 .container .boxs .box .text .t2 p {
+    color: #858585;
+}
+
+.page2 .container .boxs .box .text .t2 i {
+    color: var(--first-color);
+}
+
+.page2 .container .cont a {
+    background-color: var(--first-color);
+    padding: 10px 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* bottom: 0; */
+    border-radius: 20px;
+    color: white;
+    text-transform: capitalize;
+    transition: var(--main-transition);
+}
+
+.page2 .container .cont a:hover {
+    background-color: #fff;
+    color: var(--first-color);
+}
+
+/* end page2 */
+/* start page3  */
+.page3 .container {
+    background-color: var(--bg-color);
+    padding: 0 60px 60px 60px;
+    position: relative;
+    border-radius: 0 0 25px 25px;
+}
+
+.page3 .container .cont {
+    background-color: black;
+    color: white;
+    padding: 30px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.page3 .container .cont h2,
+.page3 .container .cont span {
+    font-size: 40px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.page3 .container .cont h2 {
+    text-decoration: underline;
+}
+
+.page3 .container .cont span {
+    color: var(--first-color);
+}
+
+.page3 .container .cont .boxs {
+    margin-top: 30px;
+}
+
+.page3 .container .cont .boxs .box {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    gap: 15px;
+}
+
+.page3 .container .cont .boxs .box img {
+    width: 7em;
+    border-radius: 20px;
+}
+
+.page3 .container .cont .boxs .box div h3 {
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.page3 .container .cont .boxs .box div p {
+    color: #656565;
+    font-size: 14px;
+}
+
+.page3 .container .cont .boxs .box a {
+    display: block;
+    color: white;
+    background-color: var(--first-color);
+    padding: 15px 20px;
+    border-radius: 30px;
+    text-transform: capitalize;
+    transition: var(--main-transition);
+}
+.page3 .container .cont .boxs .box a:hover{
+    background-color: #fff;
+    color: var(--first-color)
+}
+.page3 .container .cont .link{
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: var(--first-color);
+    padding: 15px 20px;
+    border-radius: 30px;
+    text-transform: capitalize;
+    font-weight: bold;
+    transition: var(--main-transition);
+}
+.page3 .container .cont .link:hover{
+    background-color: #fff;
+    color: var(--first-color)
+}
+
+/* end page3  */
+/* start footer  */
+footer {
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    line-height: 30px;
+}
+footer p{
+    text-transform:capitalize
+}
+footer p span{
+    text-transform: uppercase;
+}
+/* start footer  */
+

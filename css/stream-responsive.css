@@ -1,0 +1,96 @@
+@media (max-width: 767px){
+    .header .container form{
+        display: none;
+    }
+    .header .container nav:hover ul{
+        height: 20em
+    }
+    .header .container nav i{
+        font-size: 25px;
+        color: var(--first-color);
+        transition: var(--main-transition);
+    }
+    .header .container nav i:hover{
+        transform: rotate(90deg);
+    }
+    .header .container nav ul {
+        display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--bg-color);
+    height: 0em;
+    justify-content: space-evenly;
+    overflow: hidden;
+    transition: var(--main-transition);
+    z-index: 999999999;
+    }
+    .header .container nav ul  .last-li-header a img{
+    display: none;
+    
+    }
+    .part1 {
+        background-color: var(--bg-color);
+        padding: 30px;
+        border-radius: 25px 25px 0 0;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .part1 .left {
+        width: 100%;
+        padding: 10px;
+        max-height: unset;
+    }
+    .part1 .left .boxs {
+        flex-direction: column;
+    }
+    .part1 .right {
+        width: 90%;
+    }
+    .part1 .right .act .per div {
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+    }
+    .part1 .right .act .per a {
+        transform: translatex(-37px);
+    }
+    .part2 {
+        padding: 15px;
+    }
+    .part2 .cont .boxs .box > img {
+        width: 85%;
+    }
+    .part2 .cont .boxs .box .text .tx h3 {
+        font-size: 15px;
+    }
+    .part2 .cont .more {
+        bottom: -10px;
+        font-size: 12px;
+    }
+    
+
+}
+@media (max-width: 991px){
+    .part1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .part1 .left {
+        width: 100%;
+    }
+    /* .part1 .right {
+        width: 70%;
+    } */
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .part1 .right {
+        width: 70%;
+    }
+}
